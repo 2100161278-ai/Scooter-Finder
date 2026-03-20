@@ -20,10 +20,9 @@ body {
     background-color: var(--bg-color);
     color: var(--text-main);
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
     min-height: 100vh;
-    overflow: hidden;
+    overflow-y: auto; 
     position: relative;
     background-image: 
         radial-gradient(circle at 15% 50%, rgba(69, 162, 158, 0.1) 0%, transparent 50%),
@@ -34,6 +33,7 @@ body {
     width: 100%;
     max-width: 420px;
     padding: 2rem;
+    margin: auto; /* This centers it vertically and horizontally safely inside body */
     display: flex;
     flex-direction: column;
     align-items: center;
