@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scooter Finder</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Scooter Finder</h1>
+            <p>Locate your electric scooter nearby</p>
+        </header>
+
+        <main>
+            <div class="radar-container" id="radar">
+                <div class="circle outer"></div>
+                <div class="circle middle"></div>
+                <div class="circle inner"></div>
+                <div class="sweep" id="sweep"></div>
+                
+                <div class="scooter-icon" id="scooter-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="5.5" cy="17.5" r="2.5"></circle>
+                        <circle cx="18.5" cy="17.5" r="2.5"></circle>
+                        <path d="M15 6V3h2"></path>
+                        <path d="M11.5 6h-6l-2 1h14"></path>
+                        <path d="M15 6l-3.5 11.5"></path>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="status-panel">
+                <h2 id="device-name">Not Connected</h2>
+                <div class="signal-indicator" id="signal-container">
+                    <div class="bar" id="bar1"></div>
+                    <div class="bar" id="bar2"></div>
+                    <div class="bar" id="bar3"></div>
+                    <div class="bar" id="bar4"></div>
+                </div>
+                <p id="status-message" class="status-msg">Press the button below to start scanning for your scooter.</p>
+                <div class="distance-display" id="distance-display">
+                    -- m
+                </div>
+            </div>
+
+            <button id="scan-btn" class="primary-btn">
+                <span>Start Scanning</span>
+                <div class="btn-glow"></div>
+            </button>
+            <button id="disconnect-btn" class="secondary-btn hidden">
+                Disconnect
+            </button>
+        </main>
+    </div>
+
+    <!-- Notification system for errors/warnings -->
+    <div id="toast" class="toast hidden"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
